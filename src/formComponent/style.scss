@@ -29,10 +29,12 @@
         }
         .form-wrapper{
             background-color: #AC9B71;
-                box-shadow: 1px 2px 3px rgba(0,0,0,0.4);
-                margin: 50px;
-                padding: 20px;
-                width: 50%;
+            box-shadow: 1px 2px 3px rgba(0,0,0,0.4);
+            margin: 50px;
+            padding: 20px;
+            width: 50%;
+            height: fit-content;
+            align-self: center;
             select,input, button{
                 font-family: 'Cairo', sans-serif;
                 height: 40px;
@@ -107,6 +109,12 @@
         }
         .form-wrapper{
             width: 100% !important;
+        }
+    }
+    @media screen and (max-width : 450px){
+        form{
+            display: flex !important;
+            flex-direction: column !important;
         }
     }
 }
