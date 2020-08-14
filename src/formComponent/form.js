@@ -46,11 +46,9 @@ function FormComponent() {
     }
 
     function calculateResults() {
-        console.log("numOfUnits", numOfUnits);
     }
 
     const setFormValue = (e) => {
-        console.log("INPUT", e.target.value)
         const { name, value } = e.target;
 
         setForm({
@@ -63,7 +61,6 @@ function FormComponent() {
         clearValues();
         validation()
         calculateResults();
-        console.log("FOMR", form)
 
         const result1 = ((parseInt(form.height) / parseInt(form.angle)) * (parseInt(form.width) / parseInt(form.angle)));
         const flooredResult1 = Math.round(result1);
@@ -71,7 +68,6 @@ function FormComponent() {
 
         const result2 = (parseInt(form.height) * parseInt(form.angle)) / (parseInt(form.height));
         const flooredResult2 = Math.round(result2);
-        console.log("FLOORED_RES", result2)
         setSpace(flooredResult2);
 
         setUnitWall(flooredResult2 / 2);
