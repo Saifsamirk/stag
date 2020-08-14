@@ -139,7 +139,7 @@ function FormComponent() {
                         }
                     </div>
                 </div>
-                <a href="https://www.facebook.com/stagarchitects" target="_blank">Visit Our Facebook Page</a>
+                <a href="https://www.facebook.com/stagarchitects" rel="noopener noreferrer" target="_blank">Visit Our Facebook Page</a>
             </div>
         </div>
     )
