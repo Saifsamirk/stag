@@ -45,9 +45,6 @@ function FormComponent() {
         setAmountLight("");
     }
 
-    function calculateResults() {
-    }
-
     const setFormValue = (e) => {
         const { name, value } = e.target;
 
@@ -60,7 +57,6 @@ function FormComponent() {
     const handleSubmit = () => {
         clearValues();
         validation()
-        calculateResults();
 
         const result1 = ((parseInt(form.height) / parseInt(form.angle)) * (parseInt(form.width) / parseInt(form.angle)));
         const flooredResult1 = Math.round(result1);
