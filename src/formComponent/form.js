@@ -32,13 +32,13 @@ function FormComponent() {
     }
 
     function clearValues() {
-        setForm({
-            ...form,
-            space: "",
-            angle: "",
-            width: "",
-            height: ""
-        })
+        // setForm({
+        //     ...form,
+        //     space: "",
+        //     angle: "",
+        //     width: "",
+        //     height: ""
+        // })
         setNumber("");
         setSpace("");
         setUnitWall("");
