@@ -85,58 +85,61 @@ function FormComponent() {
 
     return (
         <div id="main-form">
-            <div className="container">
-                <img alt="logo" src={stag} />
-                <div className="form-wrapper">
-                    {isError && <Alert>الرجاء ادخال جميع القيم لامكانية اظهار النتائج</Alert>}
-                    <Form>
-                        <FormGroup>
-                            <Label>نوع الفراغ</Label>
-                            <Input type="select" name="space" value={form.space} onChange={(e) => setFormValue(e)}>
-                                <option>اختر نوع الفراغ</option>
-                                <option value="200">معيشة</option>
-                                <option value="400">مطبخ</option>
-                                <option value="200">حمام</option>
-                                <option value="100">ممر</option>
-                                <option value="500">محل</option>
-                                <option value="800">غرفة عمليات</option>
-                                <option value="400">مكتب</option>
-                            </Input>
-                        </FormGroup>
-                        <FormGroup>
-                            <Label>زاوية السقوط</Label>
-                            <Input type="select" name="angle" value={form.angle} onChange={(e) => setFormValue(e)}>
-                                <option>اختر زاوية السقوط</option>
-                                <option value="0.85">١٥ درجة</option>
-                                <option value="1.35">٢٤ درجة</option>
-                                <option value="2">٣٦ درجة</option>
-                                <option value="2.55">٤٥ درجة</option>
-                                <option value="3.5">٦٠ درجة</option>
-                            </Input>
-                        </FormGroup>
-                        <FormGroup>
-                            <Label>طول الفراغ</Label>
-                            <Input type="number" name="width" placeholder="الطول بالمتر" value={form.width} onChange={(e) => setFormValue(e)} />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label>عرض الفراغ</Label>
-                            <Input type="number" name="height" placeholder="العرض بالمتر" value={form.height} onChange={(e) => setFormValue(e)} />
-                        </FormGroup>
-                    </Form>
-                    <Button type="button" onClick={handleSubmit}>اظهار النتائج</Button>
-                    {isShow && isValidate &&
-                        <div className="result-wrapper">
-                            <h3>النتائج المطلوبة</h3>
-                            <div>- عدد وحدات الاضاءة : {numOfUnits}</div>
-                            <div>- التوزيع الصحيح</div>
-                            <ul>
-                                <li className="indented-input">المسافة بين كل وحدة اضاءة : {spaceBetween}</li>
-                                <li className="indented-input">المسافة بين وحدة الاضاءة والجدار : {unitAndWall}</li>
-                            </ul>
-                            <div>- مقدار الضوء الكافي : ({amountOfLight}) لومين</div>
-                        </div>
-                    }
+            <div className="main">
+                <div className="container">
+                    <img alt="logo" src={stag} />
+                    <div className="form-wrapper">
+                        {isError && <Alert>الرجاء ادخال جميع القيم لامكانية اظهار النتائج</Alert>}
+                        <Form>
+                            <FormGroup>
+                                <Label>نوع الفراغ</Label>
+                                <Input type="select" name="space" value={form.space} onChange={(e) => setFormValue(e)}>
+                                    <option>اختر نوع الفراغ</option>
+                                    <option value="200">معيشة</option>
+                                    <option value="400">مطبخ</option>
+                                    <option value="200">حمام</option>
+                                    <option value="100">ممر</option>
+                                    <option value="500">محل</option>
+                                    <option value="800">غرفة عمليات</option>
+                                    <option value="400">مكتب</option>
+                                </Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>زاوية السقوط</Label>
+                                <Input type="select" name="angle" value={form.angle} onChange={(e) => setFormValue(e)}>
+                                    <option>اختر زاوية السقوط</option>
+                                    <option value="0.85">١٥ درجة</option>
+                                    <option value="1.35">٢٤ درجة</option>
+                                    <option value="2">٣٦ درجة</option>
+                                    <option value="2.55">٤٥ درجة</option>
+                                    <option value="3.5">٦٠ درجة</option>
+                                </Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>طول الفراغ</Label>
+                                <Input type="number" name="width" placeholder="الطول بالمتر" value={form.width} onChange={(e) => setFormValue(e)} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>عرض الفراغ</Label>
+                                <Input type="number" name="height" placeholder="العرض بالمتر" value={form.height} onChange={(e) => setFormValue(e)} />
+                            </FormGroup>
+                        </Form>
+                        <Button type="button" onClick={handleSubmit}>اظهار النتائج</Button>
+                        {isShow && isValidate &&
+                            <div className="result-wrapper">
+                                <h3>النتائج المطلوبة</h3>
+                                <div>- عدد وحدات الاضاءة : {numOfUnits} وحده</div>
+                                <div>- التوزيع الصحيح</div>
+                                <ul>
+                                    <li className="indented-input">المسافة بين كل وحدة اضاءة : {spaceBetween} متر</li>
+                                    <li className="indented-input">المسافة بين وحدة الاضاءة والجدار : {unitAndWall} متر</li>
+                                </ul>
+                                <div>- مقدار الضوء الكافي : ({amountOfLight}) لومن</div>
+                            </div>
+                        }
+                    </div>
                 </div>
+                <a href="https://www.facebook.com/stagarchitects" target="_blank">Visit Our Facebook Page</a>
             </div>
         </div>
     )
