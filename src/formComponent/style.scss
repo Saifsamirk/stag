@@ -15,7 +15,7 @@
         display: flex;
         height: 100%;
         min-height: 100vh;
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
         justify-content: space-between;
     
         .alert{
@@ -100,5 +100,13 @@
         font-family: 'Cairo', sans-serif;
         margin: 0 0 20px 0;
     }
+    }
+    @media screen and (max-width : 1240px){
+        .container{
+            justify-content: center !important;
+        }
+        .form-wrapper{
+            width: 100% !important;
+        }
     }
 }
