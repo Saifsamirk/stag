@@ -11,8 +11,8 @@ function FormComponent() {
     const [form, setForm] = useState({
         space: 0,
         angle: 0,
-        width: 0,
-        height: 0
+        width: "",
+        height: ""
     })
 
     const [numOfUnits, setNumber] = useState("");
@@ -32,13 +32,6 @@ function FormComponent() {
     }
 
     function clearValues() {
-        // setForm({
-        //     ...form,
-        //     space: "",
-        //     angle: "",
-        //     width: "",
-        //     height: ""
-        // })
         setNumber("");
         setSpace("");
         setUnitWall("");
@@ -52,17 +45,18 @@ function FormComponent() {
             ...form,
             [name]: value
         })
+
     }
 
     const handleSubmit = () => {
         clearValues();
         validation()
 
-        const result1 = ((parseInt(form.height) / parseInt(form.angle)) * (parseInt(form.width) / parseInt(form.angle)));
+        const result1 = ((parseInt(form.height) / parseFloat(form.angle)) * (parseInt(form.width) / parseFloat(form.angle)));
         const flooredResult1 = Math.round(result1);
         setNumber(flooredResult1)
 
-        const result2 = (parseInt(form.height) * parseInt(form.angle)) / (parseInt(form.height));
+        const result2 = (parseInt(form.height) * parseFloat(form.angle)) / (parseInt(form.height));
         const flooredResult2 = Math.round(result2);
         setSpace(flooredResult2);
 
