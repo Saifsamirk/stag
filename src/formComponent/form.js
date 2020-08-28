@@ -120,7 +120,7 @@ function FormComponent() {
                                     <li className="indented-input">المسافة بين كل وحدة اضاءة : {spaceBetween} متر</li>
                                     <li className="indented-input">المسافة بين وحدة الاضاءة والجدار : {unitAndWall} متر</li>
                                 </ul>
-                                <div>- مقدار الضوء الكافي : ({amountOfLight}) لومن</div>
+                                <div>- مقدار الضوء الكافى (لكل وحدة اضاءة) : ({amountOfLight}) لومن</div>
                             </div>
                         }
                     </div>
