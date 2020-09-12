@@ -54,7 +54,9 @@ function FormComponent() {
 
         const result1 = ((parseInt(form.height) / parseFloat(form.angle)) * (parseInt(form.width) / parseFloat(form.angle)));
         const flooredResult1 = Math.round(result1);
-        setNumber(flooredResult1)
+        const AppFlooredResult1 = flooredResult1 % 2 !== 0 ? flooredResult1 + 1 : flooredResult1;
+        setNumber(AppFlooredResult1)
+        console.log(flooredResult1, "---", AppFlooredResult1)
 
         const result2 = (parseInt(form.height) * parseFloat(form.angle)) / (parseInt(form.height));
         const flooredResult2 = Math.round(result2);
@@ -62,7 +64,7 @@ function FormComponent() {
 
         setUnitWall(flooredResult2 / 2);
 
-        const result3 = ((parseInt(form.height) * parseInt(form.width) * parseInt(form.space * 1.2)) / (flooredResult1));
+        const result3 = ((parseInt(form.height) * parseInt(form.width) * parseInt(form.space * 1.2)) / (AppFlooredResult1));
         const flooredResult3 = Math.round(result3);
         setAmountLight(flooredResult3);
 
